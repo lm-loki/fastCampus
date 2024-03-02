@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		017385642B935C9800998B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017385632B935C9800998B9C /* AppDelegate.swift */; };
+		017385662B935C9800998B9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017385652B935C9800998B9C /* SceneDelegate.swift */; };
+		017385682B935C9800998B9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017385672B935C9800998B9C /* ViewController.swift */; };
+		0173856B2B935C9800998B9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017385692B935C9800998B9C /* Main.storyboard */; };
+		0173856D2B935C9A00998B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0173856C2B935C9A00998B9C /* Assets.xcassets */; };
+		017385702B935C9A00998B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0173856E2B935C9A00998B9C /* LaunchScreen.storyboard */; };
+		0173857B2B935C9A00998B9C /* makeLEDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173857A2B935C9A00998B9C /* makeLEDTests.swift */; };
+		017385852B935C9A00998B9C /* makeLEDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017385842B935C9A00998B9C /* makeLEDUITests.swift */; };
+		017385872B935C9A00998B9C /* makeLEDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017385862B935C9A00998B9C /* makeLEDUITestsLaunchTests.swift */; };
+		017385942B935E4700998B9C /* SequePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017385932B935E4700998B9C /* SequePushViewController.swift */; };
+		017385962B9362E000998B9C /* SeguePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017385952B9362E000998B9C /* SeguePresentViewController.swift */; };
+		017385982B93650400998B9C /* CodePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017385972B93650400998B9C /* CodePushViewController.swift */; };
+		0173859A2B93688000998B9C /* CodePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017385992B93688000998B9C /* CodePresentViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		017385772B935C9A00998B9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 017385582B935C9800998B9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0173855F2B935C9800998B9C;
+			remoteInfo = makeLED;
+		};
+		017385812B935C9A00998B9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 017385582B935C9800998B9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0173855F2B935C9800998B9C;
+			remoteInfo = makeLED;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		017385602B935C9800998B9C /* makeLED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makeLED.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		017385632B935C9800998B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		017385652B935C9800998B9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		017385672B935C9800998B9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0173856A2B935C9800998B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0173856C2B935C9A00998B9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0173856F2B935C9A00998B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		017385712B935C9A00998B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		017385762B935C9A00998B9C /* makeLEDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = makeLEDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0173857A2B935C9A00998B9C /* makeLEDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeLEDTests.swift; sourceTree = "<group>"; };
+		017385802B935C9A00998B9C /* makeLEDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = makeLEDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		017385842B935C9A00998B9C /* makeLEDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeLEDUITests.swift; sourceTree = "<group>"; };
+		017385862B935C9A00998B9C /* makeLEDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeLEDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		017385932B935E4700998B9C /* SequePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequePushViewController.swift; sourceTree = "<group>"; };
+		017385952B9362E000998B9C /* SeguePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePresentViewController.swift; sourceTree = "<group>"; };
+		017385972B93650400998B9C /* CodePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePushViewController.swift; sourceTree = "<group>"; };
+		017385992B93688000998B9C /* CodePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePresentViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0173855D2B935C9800998B9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017385732B935C9A00998B9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0173857D2B935C9A00998B9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		017385572B935C9800998B9C = {
+			isa = PBXGroup;
+			children = (
+				017385622B935C9800998B9C /* makeLED */,
+				017385792B935C9A00998B9C /* makeLEDTests */,
+				017385832B935C9A00998B9C /* makeLEDUITests */,
+				017385612B935C9800998B9C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		017385612B935C9800998B9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				017385602B935C9800998B9C /* makeLED.app */,
+				017385762B935C9A00998B9C /* makeLEDTests.xctest */,
+				017385802B935C9A00998B9C /* makeLEDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		017385622B935C9800998B9C /* makeLED */ = {
+			isa = PBXGroup;
+			children = (
+				017385632B935C9800998B9C /* AppDelegate.swift */,
+				017385652B935C9800998B9C /* SceneDelegate.swift */,
+				017385672B935C9800998B9C /* ViewController.swift */,
+				017385692B935C9800998B9C /* Main.storyboard */,
+				0173856C2B935C9A00998B9C /* Assets.xcassets */,
+				0173856E2B935C9A00998B9C /* LaunchScreen.storyboard */,
+				017385712B935C9A00998B9C /* Info.plist */,
+				017385932B935E4700998B9C /* SequePushViewController.swift */,
+				017385952B9362E000998B9C /* SeguePresentViewController.swift */,
+				017385972B93650400998B9C /* CodePushViewController.swift */,
+				017385992B93688000998B9C /* CodePresentViewController.swift */,
+			);
+			path = makeLED;
+			sourceTree = "<group>";
+		};
+		017385792B935C9A00998B9C /* makeLEDTests */ = {
+			isa = PBXGroup;
+			children = (
+				0173857A2B935C9A00998B9C /* makeLEDTests.swift */,
+			);
+			path = makeLEDTests;
+			sourceTree = "<group>";
+		};
+		017385832B935C9A00998B9C /* makeLEDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				017385842B935C9A00998B9C /* makeLEDUITests.swift */,
+				017385862B935C9A00998B9C /* makeLEDUITestsLaunchTests.swift */,
+			);
+			path = makeLEDUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0173855F2B935C9800998B9C /* makeLED */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0173858A2B935C9A00998B9C /* Build configuration list for PBXNativeTarget "makeLED" */;
+			buildPhases = (
+				0173855C2B935C9800998B9C /* Sources */,
+				0173855D2B935C9800998B9C /* Frameworks */,
+				0173855E2B935C9800998B9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = makeLED;
+			productName = makeLED;
+			productReference = 017385602B935C9800998B9C /* makeLED.app */;
+			productType = "com.apple.product-type.application";
+		};
+		017385752B935C9A00998B9C /* makeLEDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0173858D2B935C9A00998B9C /* Build configuration list for PBXNativeTarget "makeLEDTests" */;
+			buildPhases = (
+				017385722B935C9A00998B9C /* Sources */,
+				017385732B935C9A00998B9C /* Frameworks */,
+				017385742B935C9A00998B9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				017385782B935C9A00998B9C /* PBXTargetDependency */,
+			);
+			name = makeLEDTests;
+			productName = makeLEDTests;
+			productReference = 017385762B935C9A00998B9C /* makeLEDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0173857F2B935C9A00998B9C /* makeLEDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 017385902B935C9A00998B9C /* Build configuration list for PBXNativeTarget "makeLEDUITests" */;
+			buildPhases = (
+				0173857C2B935C9A00998B9C /* Sources */,
+				0173857D2B935C9A00998B9C /* Frameworks */,
+				0173857E2B935C9A00998B9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				017385822B935C9A00998B9C /* PBXTargetDependency */,
+			);
+			name = makeLEDUITests;
+			productName = makeLEDUITests;
+			productReference = 017385802B935C9A00998B9C /* makeLEDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		017385582B935C9800998B9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					0173855F2B935C9800998B9C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					017385752B935C9A00998B9C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 0173855F2B935C9800998B9C;
+					};
+					0173857F2B935C9A00998B9C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 0173855F2B935C9800998B9C;
+					};
+				};
+			};
+			buildConfigurationList = 0173855B2B935C9800998B9C /* Build configuration list for PBXProject "makeLED" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 017385572B935C9800998B9C;
+			productRefGroup = 017385612B935C9800998B9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0173855F2B935C9800998B9C /* makeLED */,
+				017385752B935C9A00998B9C /* makeLEDTests */,
+				0173857F2B935C9A00998B9C /* makeLEDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0173855E2B935C9800998B9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				017385702B935C9A00998B9C /* LaunchScreen.storyboard in Resources */,
+				0173856D2B935C9A00998B9C /* Assets.xcassets in Resources */,
+				0173856B2B935C9800998B9C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017385742B935C9A00998B9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0173857E2B935C9A00998B9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0173855C2B935C9800998B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				017385682B935C9800998B9C /* ViewController.swift in Sources */,
+				017385982B93650400998B9C /* CodePushViewController.swift in Sources */,
+				017385642B935C9800998B9C /* AppDelegate.swift in Sources */,
+				017385942B935E4700998B9C /* SequePushViewController.swift in Sources */,
+				0173859A2B93688000998B9C /* CodePresentViewController.swift in Sources */,
+				017385962B9362E000998B9C /* SeguePresentViewController.swift in Sources */,
+				017385662B935C9800998B9C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017385722B935C9A00998B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0173857B2B935C9A00998B9C /* makeLEDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0173857C2B935C9A00998B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				017385872B935C9A00998B9C /* makeLEDUITestsLaunchTests.swift in Sources */,
+				017385852B935C9A00998B9C /* makeLEDUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		017385782B935C9A00998B9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0173855F2B935C9800998B9C /* makeLED */;
+			targetProxy = 017385772B935C9A00998B9C /* PBXContainerItemProxy */;
+		};
+		017385822B935C9A00998B9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0173855F2B935C9800998B9C /* makeLED */;
+			targetProxy = 017385812B935C9A00998B9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		017385692B935C9800998B9C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0173856A2B935C9800998B9C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0173856E2B935C9A00998B9C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0173856F2B935C9A00998B9C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		017385882B935C9A00998B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		017385892B935C9A00998B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0173858B2B935C9A00998B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 525XKBU9M6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = makeLED/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joowon.makeLED;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0173858C2B935C9A00998B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 525XKBU9M6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = makeLED/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joowon.makeLED;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0173858E2B935C9A00998B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 525XKBU9M6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joowon.makeLEDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/makeLED.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/makeLED";
+			};
+			name = Debug;
+		};
+		0173858F2B935C9A00998B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 525XKBU9M6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joowon.makeLEDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/makeLED.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/makeLED";
+			};
+			name = Release;
+		};
+		017385912B935C9A00998B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 525XKBU9M6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joowon.makeLEDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = makeLED;
+			};
+			name = Debug;
+		};
+		017385922B935C9A00998B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 525XKBU9M6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joowon.makeLEDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = makeLED;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0173855B2B935C9800998B9C /* Build configuration list for PBXProject "makeLED" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				017385882B935C9A00998B9C /* Debug */,
+				017385892B935C9A00998B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0173858A2B935C9A00998B9C /* Build configuration list for PBXNativeTarget "makeLED" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0173858B2B935C9A00998B9C /* Debug */,
+				0173858C2B935C9A00998B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0173858D2B935C9A00998B9C /* Build configuration list for PBXNativeTarget "makeLEDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0173858E2B935C9A00998B9C /* Debug */,
+				0173858F2B935C9A00998B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		017385902B935C9A00998B9C /* Build configuration list for PBXNativeTarget "makeLEDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				017385912B935C9A00998B9C /* Debug */,
+				017385922B935C9A00998B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 017385582B935C9800998B9C /* Project object */;
+}
