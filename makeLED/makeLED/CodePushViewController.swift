@@ -11,7 +11,10 @@ class CodePushViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let name = name {
+            self.nameLabel.text = name
+            self.nameLabel.sizeToFit()
+        }
     }
     
 
@@ -19,5 +22,8 @@ class CodePushViewController: UIViewController {
         self.navigationController?
             .popViewController(animated: true)
     }
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    var name: String?
     
 }
