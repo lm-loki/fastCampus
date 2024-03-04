@@ -18,6 +18,9 @@ class ViewController: UIViewController, LEDBoardSettingDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let settingViewController = segue.destination as? SettingViewController {
             settingViewController.delegate = self
+            settingViewController.ledText = self.contentsLabel.text
+            settingViewController.textColor = self.contentsLabel.textColor
+            settingViewController.backgroundColor = self.view.backgroundColor ?? .black
         }
     }
     // LEDBoardSettingDelegate 프로토콜 채택시,  SettingViewController에 프로토콜 구현된 메서드를 기입해야한다

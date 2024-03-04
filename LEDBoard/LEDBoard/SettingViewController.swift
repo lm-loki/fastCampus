@@ -25,9 +25,20 @@ class SettingViewController: UIViewController {
     weak var delegate: LEDBoardSettingDelegate?
     var textColor: UIColor = .yellow
     var backgroundColor: UIColor = .black
+    var ledText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //led화면에서 전달한 값이 뷰에 초기화
+        self.configure()
+    }
+    // 변경값 저장 기능
+    private func configure() {
+        if let ledText = self.ledText {
+            self.textField.text = ledText
+        }
+        self.changeTextColor(color: self.textColor)
+        self.changeBackgroundColorButton(color: backgroundColor)
     }
     
     @IBAction func tapTextColorButton(_ sender: UIButton) {
