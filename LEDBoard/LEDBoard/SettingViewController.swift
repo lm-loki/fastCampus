@@ -7,6 +7,11 @@
 
 import UIKit
 
+// delegate를 이용해서 이전화면에 설정값을 전달
+protocol LEDBoardSettingDelegate: AnyObject {
+    func changedSetting(text: String?, textColor: UIColor, backgroundColor: UIColor)
+}
+
 class SettingViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
@@ -16,6 +21,10 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var blackButton: UIButton!
     @IBOutlet weak var blueButton: UIButton!
     @IBOutlet weak var orangeButton: UIButton!
+    
+    weak var delegate: LEDBoardSettingDelegate?
+    var textColor: UIColor = .yellow
+    var backgroundColor: UIColor = .black
     
     override func viewDidLoad() {
         super.viewDidLoad()
