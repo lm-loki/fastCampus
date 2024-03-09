@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016E55E52B9CA73500B427D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E368B32B99B27A00C9B1F3 /* Main.storyboard */; };
 		01E368AE2B99B27A00C9B1F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E368AD2B99B27A00C9B1F3 /* AppDelegate.swift */; };
 		01E368B02B99B27A00C9B1F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E368AF2B99B27A00C9B1F3 /* SceneDelegate.swift */; };
 		01E368B22B99B27A00C9B1F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E368B12B99B27A00C9B1F3 /* ViewController.swift */; };
 		01E368B52B99B27A00C9B1F3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 01E368B42B99B27A00C9B1F3 /* Base */; };
 		01E368B72B99B27C00C9B1F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01E368B62B99B27C00C9B1F3 /* Assets.xcassets */; };
-		01E368BA2B99B27C00C9B1F3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 01E368B92B99B27C00C9B1F3 /* Base */; };
-		01E368C22B9A04A600C9B1F3 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E368C12B9A04A600C9B1F3 /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		01E368B62B99B27C00C9B1F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01E368B92B99B27C00C9B1F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01E368BB2B99B27C00C9B1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01E368C12B9A04A600C9B1F3 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				01E368B62B99B27C00C9B1F3 /* Assets.xcassets */,
 				01E368B82B99B27C00C9B1F3 /* LaunchScreen.storyboard */,
 				01E368BB2B99B27C00C9B1F3 /* Info.plist */,
-				01E368C12B9A04A600C9B1F3 /* RoundButton.swift */,
 			);
 			path = Calculator2;
 			sourceTree = "<group>";
@@ -128,8 +125,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016E55E52B9CA73500B427D7 /* Main.storyboard in Resources */,
 				01E368B72B99B27C00C9B1F3 /* Assets.xcassets in Resources */,
-				01E368BA2B99B27C00C9B1F3 /* Base in Resources */,
 				01E368B52B99B27A00C9B1F3 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E368C22B9A04A600C9B1F3 /* RoundButton.swift in Sources */,
 				01E368B22B99B27A00C9B1F3 /* ViewController.swift in Sources */,
 				01E368AE2B99B27A00C9B1F3 /* AppDelegate.swift in Sources */,
 				01E368B02B99B27A00C9B1F3 /* SceneDelegate.swift in Sources */,

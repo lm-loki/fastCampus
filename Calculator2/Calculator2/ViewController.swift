@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     var result = ""
     // 현재 선택된 연산자
     var currentOperation: Operation = .Unknown
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
             self.displayNumber += numberValue
             self.numberOutputLabel.text = self.displayNumber
         }
+        print("tap")
     }
     
     @IBAction func tapClearButton(_ sender: UIButton) {
@@ -69,5 +71,46 @@ class ViewController: UIViewController {
     @IBAction func tapEqualButton(_ sender: UIButton) {
     }
     
+    func operation(_ operation: Operation) {
+      if self.currentOperation != .Unknown {
+        if !self.displayNumber.isEmpty {
+          self.secondOperand = self.displayNumber
+          self.displayNumber = ""
+
+          guard let firstOperand = Double(self.firstOperand) else { return }
+          guard let secondOperand = Double(self.secondOperand) else { return }
+
+          switch self.currentOperation {
+          case .Add:
+            self.result = "\(firstOperand + secondOperand)"
+
+          case .Subtract:
+            self.result = "\(firstOperand - secondOperand)"
+
+          case .Divide:
+            self.result = "\(firstOperand / secondOperand)"
+
+          case .Multiply:
+            self.result = "\(firstOperand * secondOperand)"
+
+          default:
+            break
+          }
+
+          if let result = Double(self.result), result.truncatingRemainder(dividingBy: 1) == 0 {
+            self.result = "\(Int(result))"
+          }
+
+          self.firstOperand = self.result
+          self.numberOutputLabel.text = self.result
+        }
+
+        self.currentOperation = operation
+      } else {
+        self.firstOperand = self.displayNumber
+        self.currentOperation = operation
+        self.displayNumber = ""
+      }
+    }
 }
 

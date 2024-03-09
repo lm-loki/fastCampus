@@ -33,7 +33,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-yS-Erq">
                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="87.666666666666671"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWC-YO-nf0" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWC-YO-nf0">
                                                         <rect key="frame" x="0.0" y="0.0" width="273.33333333333331" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="Button"/>
@@ -41,14 +41,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="40"/>
                                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zjh-hf-TX3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMp-SD-kjF" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMp-SD-kjF">
                                                         <rect key="frame" x="278.33333333333331" y="0.0" width="87.666666666666686" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -59,9 +56,6 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapDivideButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eb3-3D-e3P"/>
                                                         </connections>
@@ -71,7 +65,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gcF-tp-6iU">
                                                 <rect key="frame" x="0.0" y="95.666666666666686" width="366" height="88"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcx-Hx-gdx" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcx-Hx-gdx">
                                                         <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="88"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -82,14 +76,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x75-QC-zOo"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dk3-fu-Wad" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dk3-fu-Wad">
                                                         <rect key="frame" x="92.666666666666686" y="0.0" width="88" height="88"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -100,14 +91,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rZI-gu-bi4"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9o6-0G-LU6" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9o6-0G-LU6">
                                                         <rect key="frame" x="185.66666666666666" y="0.0" width="87.666666666666657" height="88"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -118,14 +106,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BKg-dk-ZbV"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3we-gx-E96" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3we-gx-E96">
                                                         <rect key="frame" x="278.33333333333331" y="0.0" width="87.666666666666686" height="88"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -136,9 +121,6 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapMultiplyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uck-kr-DOk"/>
                                                         </connections>
@@ -148,7 +130,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0c7-A5-Tjw">
                                                 <rect key="frame" x="0.0" y="191.66666666666669" width="366" height="87.666666666666686"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51b-BR-Kt1" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51b-BR-Kt1">
                                                         <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -159,14 +141,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jmh-dx-ZYU"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoR-7r-iiA" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoR-7r-iiA">
                                                         <rect key="frame" x="92.666666666666686" y="0.0" width="88" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -177,14 +156,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4o2-d3-aRZ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCD-oa-IBJ" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCD-oa-IBJ">
                                                         <rect key="frame" x="185.66666666666666" y="0.0" width="87.666666666666657" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -195,14 +171,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sqi-Ie-guN"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYr-eE-Koe" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYr-eE-Koe">
                                                         <rect key="frame" x="278.33333333333331" y="0.0" width="87.666666666666686" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -213,9 +186,6 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapSubtractButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fyH-ge-BVk"/>
                                                         </connections>
@@ -225,7 +195,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sn1-hy-zPa">
                                                 <rect key="frame" x="0.0" y="287.33333333333331" width="366" height="87.666666666666686"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fg-G9-FVP" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fg-G9-FVP">
                                                         <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -236,14 +206,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pIu-P7-elF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdc-qK-z7N" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdc-qK-z7N">
                                                         <rect key="frame" x="92.666666666666686" y="0.0" width="88" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -254,14 +221,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Dn-xK-p8S"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf4-0m-yfb" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf4-0m-yfb">
                                                         <rect key="frame" x="185.66666666666666" y="0.0" width="87.666666666666657" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -272,14 +236,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OHj-99-NwJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrI-Bm-Zab" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrI-Bm-Zab">
                                                         <rect key="frame" x="278.33333333333331" y="0.0" width="87.666666666666686" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -290,9 +251,6 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapPlusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1FR-oZ-0EQ"/>
                                                         </connections>
@@ -302,7 +260,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="003-10-uUx">
                                                 <rect key="frame" x="0.0" y="383" width="366" height="87.666666666666686"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocW-sb-kJe" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocW-sb-kJe">
                                                         <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="Button"/>
@@ -310,14 +268,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bhz-8t-ld4"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4z-cd-8UI" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4z-cd-8UI">
                                                         <rect key="frame" x="185.66666666666666" y="0.0" width="87.666666666666657" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -328,14 +283,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapDotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LLp-CS-QvD"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxp-Qz-uEF" customClass="RoundButton" customModule="Calculator2" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxp-Qz-uEF">
                                                         <rect key="frame" x="278.33333333333331" y="0.0" width="87.666666666666686" height="87.666666666666671"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -346,9 +298,6 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tapEqualButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ql6-eR-YKS"/>
                                                         </connections>
@@ -396,57 +345,4 @@
             <point key="canvasLocation" x="114" y="-27"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="3we-gx-E96">
-            <size key="intrinsicContentSize" width="37" height="50"/>
-        </designable>
-        <designable name="4Fg-G9-FVP">
-            <size key="intrinsicContentSize" width="38.333333333333336" height="50"/>
-        </designable>
-        <designable name="51b-BR-Kt1">
-            <size key="intrinsicContentSize" width="43.333333333333336" height="50"/>
-        </designable>
-        <designable name="9o6-0G-LU6">
-            <size key="intrinsicContentSize" width="43.333333333333336" height="50"/>
-        </designable>
-        <designable name="BCD-oa-IBJ">
-            <size key="intrinsicContentSize" width="43.333333333333336" height="50"/>
-        </designable>
-        <designable name="Dk3-fu-Wad">
-            <size key="intrinsicContentSize" width="43" height="50"/>
-        </designable>
-        <designable name="Fxp-Qz-uEF">
-            <size key="intrinsicContentSize" width="43" height="50"/>
-        </designable>
-        <designable name="NMp-SD-kjF">
-            <size key="intrinsicContentSize" width="33.333333333333336" height="50"/>
-        </designable>
-        <designable name="Wf4-0m-yfb">
-            <size key="intrinsicContentSize" width="42.666666666666664" height="50"/>
-        </designable>
-        <designable name="XrI-Bm-Zab">
-            <size key="intrinsicContentSize" width="43" height="50"/>
-        </designable>
-        <designable name="ZYr-eE-Koe">
-            <size key="intrinsicContentSize" width="37.666666666666664" height="50"/>
-        </designable>
-        <designable name="aoR-7r-iiA">
-            <size key="intrinsicContentSize" width="42.666666666666664" height="50"/>
-        </designable>
-        <designable name="bcx-Hx-gdx">
-            <size key="intrinsicContentSize" width="41.333333333333336" height="50"/>
-        </designable>
-        <designable name="oWC-YO-nf0">
-            <size key="intrinsicContentSize" width="78" height="62"/>
-        </designable>
-        <designable name="ocW-sb-kJe">
-            <size key="intrinsicContentSize" width="43.333333333333336" height="50"/>
-        </designable>
-        <designable name="q4z-cd-8UI">
-            <size key="intrinsicContentSize" width="31.333333333333332" height="50"/>
-        </designable>
-        <designable name="tdc-qK-z7N">
-            <size key="intrinsicContentSize" width="42" height="50"/>
-        </designable>
-    </designables>
 </document>
