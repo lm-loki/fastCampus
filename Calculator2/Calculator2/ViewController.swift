@@ -14,15 +14,17 @@ enum Operation {
     case Multiply
     case Unknown
 }
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var numberOutputLabel: UILabel!
     
     var displayNumber = ""
+    // 첫번째 피연산자
     var firstOperand = ""
     var secondOperand = ""
     var result = ""
-    // 현재 연산자에 어떤 연산자가 저장되어있는지 알수있게함
+    // 현재 선택된 연산자
     var currentOperation: Operation = .Unknown
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +39,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapClearButton(_ sender: UIButton) {
+        self.displayNumber = ""
+        self.firstOperand = ""
+        self.secondOperand = ""
+        self.result = ""
+        self.currentOperation = .Unknown
+        self.numberOutputLabel.text = "0"
     }
     
     @IBAction func tapDotButton(_ sender: UIButton) {
+        if self.displayNumber.count < 8, !self.displayNumber.contains(".") {
+            self.displayNumber += self.displayNumber.isEmpty ? "0." : "."
+            self.numberOutputLabel.text = self.displayNumber
+        }
     }
     
     @IBAction func tapDivideButton(_ sender: UIButton) {
