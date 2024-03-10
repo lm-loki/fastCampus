@@ -57,18 +57,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapDivideButton(_ sender: UIButton) {
+        self.operation(.Divide)
     }
     
     @IBAction func tapMultiplyButton(_ sender: UIButton) {
+        self.operation(.Subtract)
     }
     
     @IBAction func tapSubtractButton(_ sender: UIButton) {
+        self.operation(.Subtract)
     }
     
     @IBAction func tapPlusButton(_ sender: UIButton) {
+        self.operation(.Add)
     }
     
     @IBAction func tapEqualButton(_ sender: UIButton) {
+        self.operation(self.currentOperation)
     }
     
     func operation(_ operation: Operation) {
@@ -109,6 +114,7 @@ class ViewController: UIViewController {
       } else {
         self.firstOperand = self.displayNumber
         self.currentOperation = operation
+          // 예를 들어 3+ 한 이후 다른 숫자 누를시 다른숫자만 displatNumber에 나와야해서 비웠음
         self.displayNumber = ""
       }
     }
