@@ -10,11 +10,16 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tavleView: UITableView!
-    var tasks = [Task]()
+    var tasks = [Task]() {
+        didSet {
+            self.saveTasks()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tavleView.dataSource = self
+        self.loadTasks()
     }
 
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
