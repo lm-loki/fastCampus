@@ -114,6 +114,20 @@ extension ViewController: UITableViewDataSource {
             self.doneButtonTap()
         }
     }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    //셀이 다른 행으로 이동시 sourceIndexPath에서 원래 위치 알려줌
+    //destinationIndexPath은 어디로 이동햇는지 알려줌
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        //재정렬된 셀과 같이 배열도 재정렬이 되게끔 구현
+        var tasks = self.tasks // 배열 가져오기
+        let task = tasks[sourceIndexPath.row] //배열요소 접근
+        tasks.remove(at: sourceIndexPath.row) // 원래 할일 위치 삭제
+        tasks.insert(task, at: destinationIndexPath.row) // 변경된 위치 기입
+        self.tasks = tasks // 할일 배열 재정렬
+    }
 }
 
 extension ViewController:UITableViewDelegate {
