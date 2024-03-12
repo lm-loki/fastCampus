@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
+    var doneButton: UIBarButtonItem?
     var tasks = [Task]() {
         didSet {
             self.saveTasks()
@@ -18,12 +20,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // selector: 포괄형 구문 호출
+        self.doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTap))
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.loadTasks()
     }
-
+    //selector로 호출 메서드
+    @objc func doneButtonTap() {
+        
+    }
+    
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
+        guard !self.tasks.isEmpty else { return }
+        self.navigationItem.leftBarButtonItem = self.doneButton
+        self.tableView.setEditing(true, animated: true)
+
     }
     
     @IBAction func tapAddButton(_ sender: UIBarButtonItem) {
