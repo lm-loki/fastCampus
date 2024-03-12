@@ -41,6 +41,17 @@ class ViewController: UIViewController {
         })
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func saveTasks() {
+        let data = self.tasks.map {
+            [
+                "title": $0.title,
+                "done": $0.done
+            ]
+        }
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(data, forKey: "tasks")
+    }
 }
 
 extension ViewController: UITableViewDataSource {
