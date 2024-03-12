@@ -9,15 +9,35 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tavleView: UITableView!
-    var tasks = [Task]()
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
+    var doneButton: UIBarButtonItem?
+    var tasks = [Task]() {
+        didSet {
+            self.saveTasks()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tavleView.dataSource = self
+        // selector: 포괄형 구문 호출
+        self.doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTap))
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.loadTasks()
     }
-
+    //selector로 호출 메서드
+    @objc func doneButtonTap() {
+        self.navigationItem.leftBarButtonItem = self.editButton
+        self.tableView.setEditing(false, animated: true)
+    }
+    
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
+        guard !self.tasks.isEmpty else { return }
+        // editButton이 doneButton으로 변경
+        self.navigationItem.leftBarButtonItem = self.doneButton
+        // tableView가 편집모드로 전환
+        self.tableView.setEditing(true, animated: true)
     }
     
     @IBAction func tapAddButton(_ sender: UIBarButtonItem) {
@@ -30,7 +50,7 @@ class ViewController: UIViewController {
             // 할일을 등록할때마다 tasks에 할일이 추가가됨
             self?.tasks.append(task)
             //할일이 추가될대마다 뷰가 갱신됨
-            self?.tavleView.reloadData()
+            self?.tableView.reloadData()
         })
         let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         alert.addAction(cancelButton)
@@ -40,6 +60,29 @@ class ViewController: UIViewController {
             textField.placeholder = "할 일을 입력해주세요."
         })
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func saveTasks() {
+        let data = self.tasks.map {
+            [
+                "title": $0.title,
+                "done": $0.done
+            ]
+        }
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(data, forKey: "tasks")
+    }
+    
+    func loadTasks() {
+        let userDefaults = UserDefaults.standard
+        // 저장된 데이터 불러오기, object 메서드는 anytype으로 반환
+        // 저장된 데이터는 딕셔너리로 저장해서 딕셔너리 타입캐스팅, 실패시 nil이 될수있어 guard let 사용
+        guard let data = userDefaults.object(forKey: "tasks") as? [[String: Any]] else { return }
+        self.tasks = data.compactMap {
+            guard let title = $0["title"] as? String else { return nil }
+            guard let done = $0["done"] as? Bool else { return nil }
+            return Task(title: title, done: done)
+        }
     }
 }
 
@@ -54,6 +97,46 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let task = self.tasks[indexPath.row]
         cell.textLabel?.text = task.title
+        // Done 상태에 따라 표시를 다르게 함
+        if task.done {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
         return cell
+    }
+    //commit editingStyle 삭제버튼이 눌렀을때 어떤셀이 삭제되는지 알려주는 메서드
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        self.tasks.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+        if self.tasks.isEmpty {
+            self.doneButtonTap()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    //셀이 다른 행으로 이동시 sourceIndexPath에서 원래 위치 알려줌
+    //destinationIndexPath은 어디로 이동햇는지 알려줌
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        //재정렬된 셀과 같이 배열도 재정렬이 되게끔 구현
+        var tasks = self.tasks // 배열 가져오기
+        let task = tasks[sourceIndexPath.row] //배열요소 접근
+        tasks.remove(at: sourceIndexPath.row) // 원래 할일 위치 삭제
+        tasks.insert(task, at: destinationIndexPath.row) // 변경된 위치 기입
+        self.tasks = tasks // 할일 배열 재정렬
+    }
+}
+
+extension ViewController:UITableViewDelegate {
+    //didSelectRowAt은 어떤셀이 선택되었는지 알려주는 메서드
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var task = self.tasks[indexPath.row]
+        task.done = !task.done
+        self.tasks[indexPath.row] = task
+        // with는 어떤 애니메이션으로 구현되게끔할지 정할수있음
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
