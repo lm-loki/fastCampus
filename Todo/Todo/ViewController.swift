@@ -52,6 +52,18 @@ class ViewController: UIViewController {
         let userDefaults = UserDefaults.standard
         userDefaults.set(data, forKey: "tasks")
     }
+    
+    func loadTasks() {
+        let userDefaults = UserDefaults.standard
+        // 저장된 데이터 불러오기, object 메서드는 anytype으로 반환
+        // 저장된 데이터는 딕셔너리로 저장해서 딕셔너리 타입캐스팅, 실패시 nil이 될수있어 guard let 사용
+        guard let data = userDefaults.object(forKey: "tasks") as? [[String: Any]] else { return }
+        self.tasks = data.compactMap {
+            guard let title = $0["title"] as? String else { return nil }
+            guard let done = $0["done"] as? Bool else { return nil }
+            return Task(title: title, done: done)
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource {
