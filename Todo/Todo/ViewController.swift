@@ -28,14 +28,16 @@ class ViewController: UIViewController {
     }
     //selector로 호출 메서드
     @objc func doneButtonTap() {
-        
+        self.navigationItem.leftBarButtonItem = self.editButton
+        self.tableView.setEditing(false, animated: true)
     }
     
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
         guard !self.tasks.isEmpty else { return }
+        // editButton이 doneButton으로 변경
         self.navigationItem.leftBarButtonItem = self.doneButton
+        // tableView가 편집모드로 전환
         self.tableView.setEditing(true, animated: true)
-
     }
     
     @IBAction func tapAddButton(_ sender: UIBarButtonItem) {
