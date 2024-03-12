@@ -105,6 +105,15 @@ extension ViewController: UITableViewDataSource {
         }
         return cell
     }
+    //commit editingStyle 삭제버튼이 눌렀을때 어떤셀이 삭제되는지 알려주는 메서드
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        self.tasks.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+        if self.tasks.isEmpty {
+            self.doneButtonTap()
+        }
+    }
 }
 
 extension ViewController:UITableViewDelegate {
