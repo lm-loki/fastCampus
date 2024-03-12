@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tavleView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     var tasks = [Task]() {
         didSet {
             self.saveTasks()
@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tavleView.dataSource = self
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.loadTasks()
     }
 
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
             // 할일을 등록할때마다 tasks에 할일이 추가가됨
             self?.tasks.append(task)
             //할일이 추가될대마다 뷰가 갱신됨
-            self?.tavleView.reloadData()
+            self?.tableView.reloadData()
         })
         let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         alert.addAction(cancelButton)
@@ -82,6 +83,23 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let task = self.tasks[indexPath.row]
         cell.textLabel?.text = task.title
+        // Done 상태에 따라 표시를 다르게 함
+        if task.done {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
         return cell
+    }
+}
+
+extension ViewController:UITableViewDelegate {
+    //didSelectRowAt은 어떤셀이 선택되었는지 알려주는 메서드
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var task = self.tasks[indexPath.row]
+        task.done = !task.done
+        self.tasks[indexPath.row] = task
+        // with는 어떤 애니메이션으로 구현되게끔할지 정할수있음
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
