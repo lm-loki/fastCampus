@@ -9,21 +9,27 @@ import UIKit
 
 class WriteDiaryViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    @IBOutlet weak var contentsTextView: UITextView!
+    
+    @IBOutlet weak var dateTextField: UITextField!
+    
+    @IBAction func tapConfirmButton(_ sender: UIBarButtonItem) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.configureContentsTextView()
     }
-    */
-
+    
+    private func configureContentsTextView() {
+        let borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1.0)
+        // layer 관련된 색상은 cgColor로 설정
+        self.contentsTextView.layer.borderColor = borderColor.cgColor
+        self.contentsTextView.layer.borderWidth = 0.5
+        self.contentsTextView.layer.cornerRadius = 5.0
+    }
 }
+
