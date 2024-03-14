@@ -51,5 +51,10 @@ class WriteDiaryViewController: UIViewController {
         self.diaryDate = datePicker.date
         self.dateTextField.text = formater.string(from: datePicker.date)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //빈화면 터치시 키보드나 datepicker가 사라짐
+        self.view.endEditing(true)
+    }
 }
 
