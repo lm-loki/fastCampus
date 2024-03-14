@@ -38,6 +38,8 @@ class WriteDiaryViewController: UIViewController {
         self.datePicker.datePickerMode = .date
         self.datePicker.preferredDatePickerStyle = .wheels
         self.datePicker.addTarget(self, action: #selector(datePickerValueDidChange(_:)), for: .valueChanged)
+        //datePicker 한국어로
+        self.datePicker.locale = Locale(identifier: "ko_KR")
         // 키보드 대신 datepicker가 나오게 됨
         self.dateTextField.inputView = self.datePicker
     }
