@@ -13,6 +13,7 @@ class WriteDiaryViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
     @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var confirmButton: UIBarButtonItem!
     @IBAction func tapConfirmButton(_ sender: UIBarButtonItem) {
     }
     
@@ -24,6 +25,8 @@ class WriteDiaryViewController: UIViewController {
         super.viewDidLoad()
         self.configureContentsTextView()
         self.configureDatePicker()
+        self.configureInputField()
+        self.confirmButton.isEnabled = false
     }
     
     private func configureContentsTextView() {
@@ -43,6 +46,12 @@ class WriteDiaryViewController: UIViewController {
         // 키보드 대신 datepicker가 나오게 됨
         self.dateTextField.inputView = self.datePicker
     }
+    
+    private func configureInputField() {
+        self.contentsTextView.delegate = self
+        self.titleTextField.addTarget(self, action: #selector(titleTextFieldDidChange(_ :)), for: .editingChanged)
+        self.dateTextField.addTarget(self, action: #selector(dateTextFieldDidChange(_ :)), for: .editingChanged)
+    }
     // selector로 호출할 메서드
     @objc private func datePickerValueDidChange(_ datePicker: UIDatePicker) {
         let formater = DateFormatter()
@@ -50,11 +59,32 @@ class WriteDiaryViewController: UIViewController {
         formater.locale = Locale(identifier: "ko_KR")
         self.diaryDate = datePicker.date
         self.dateTextField.text = formater.string(from: datePicker.date)
+        // 날짜가 변경될때마다 editingChanged 액션을 발생시켜 dateTextFieldDidChange 호출
+        self.dateTextField.sendActions(for: .editingChanged)
+    }
+    
+    @objc private func titleTextFieldDidChange(_ textfield: UITextField) {
+        self.validateInputField()
+    }
+    
+    @objc private func dateTextFieldDidChange(_ textfield: UITextField) {
+        self.validateInputField()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //빈화면 터치시 키보드나 datepicker가 사라짐
         self.view.endEditing(true)
     }
+    
+    private func validateInputField() {
+        // 모든칸이 입력되어있어야 등록 버튼 활성화
+        self.confirmButton.isEnabled = !(self.titleTextField.text?.isEmpty ?? true) && !(self.dateTextField.text?.isEmpty ?? true) && !self.contentsTextView.text.isEmpty
+    }
 }
 
+extension WriteDiaryViewController: UITextViewDelegate {
+    //textView에 text가 입력될때마다 호출되는 메서드
+    func textViewDidChange(_ textView: UITextView) {
+        self.validateInputField()
+    }
+}

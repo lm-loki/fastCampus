@@ -163,11 +163,12 @@
                     <navigationItem key="navigationItem" title="일기 작성" id="wDZ-Tg-a6J">
                         <barButtonItem key="rightBarButtonItem" title="등록" id="2eG-St-t1f">
                             <connections>
-                                <action selector="tapConfirmButton:" destination="KL1-TG-fii" id="hb2-cr-5v3"/>
+                                <action selector="tapConfirmButton:" destination="KL1-TG-fii" id="67h-2D-rNK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="confirmButton" destination="2eG-St-t1f" id="dWI-Bz-fGu"/>
                         <outlet property="contentsTextView" destination="hcS-FG-d3h" id="jMx-BK-JVt"/>
                         <outlet property="dateTextField" destination="xyz-OO-igl" id="LC0-bw-AO7"/>
                         <outlet property="titleTextField" destination="Zfx-Ob-OSy" id="6hG-b6-aPX"/>
