@@ -163,7 +163,7 @@
                     <navigationItem key="navigationItem" title="일기 작성" id="wDZ-Tg-a6J">
                         <barButtonItem key="rightBarButtonItem" title="등록" id="2eG-St-t1f">
                             <connections>
-                                <action selector="tapConfirmButton:" destination="KL1-TG-fii" id="67h-2D-rNK"/>
+                                <action selector="tapConfirmButton:" destination="KL1-TG-fii" id="5QY-kd-nzJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
