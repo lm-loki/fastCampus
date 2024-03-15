@@ -7,19 +7,29 @@
 
 import UIKit
 
-class WriteDiaryViewController: UIViewController {
+protocol WriteDiaryViewDelegate: AnyObject {
+    func didSelectResgister(diary: Diary)
+}
 
+class WriteDiaryViewController: UIViewController {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var confirmButton: UIBarButtonItem!
     @IBAction func tapConfirmButton(_ sender: UIBarButtonItem) {
+        guard let title = self.titleTextField.text else { return }
+        guard let contents = self.contentsTextView.text else { return }
+        guard let date = self.diaryDate else { return }
+        let diary = Diary(title: title, contents: contents, date: date, isStar: false)
+        self.delegate?.didSelectResgister(diary: diary)
+        self.navigationController?.popViewController(animated: true)
     }
     
     private let datePicker = UIDatePicker()
     //datePicker에서 선택된 Date를 저장하는 프로퍼티
     private var diaryDate: Date?
+    weak var delegate: WriteDiaryViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
