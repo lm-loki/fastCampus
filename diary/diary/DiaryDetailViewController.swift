@@ -9,6 +9,7 @@ import UIKit
 
 protocol DiaryDetailViewDelegate: AnyObject {
     func didSelectDelete(indexPath: IndexPath)
+    func didSelectStar(indexPath: IndexPath, isStar: Bool)
 }
 
 class DiaryDetailViewController: UIViewController {
@@ -79,6 +80,8 @@ class DiaryDetailViewController: UIViewController {
     @objc func tapStarButton() {
         //옵셔널 바인딩
         guard let isStar = self.diary?.isStar else { return }
+        guard let indexPath = self.indexPath else { return }
+
         //즐겨찾기 토글
         if isStar {
             self.starButton?.image = UIImage(systemName: "star")
@@ -86,6 +89,7 @@ class DiaryDetailViewController: UIViewController {
             self.starButton?.image = UIImage(systemName: "star.fill")
         }
         self.diary?.isStar = !isStar
+        self.delegate?.didSelectStar(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
     }
     
     // deinit 될때 해당 옵저버 제거
