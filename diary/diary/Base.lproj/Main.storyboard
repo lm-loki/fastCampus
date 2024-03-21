@@ -244,6 +244,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="80"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="1zk-Lq-g02" id="4Vj-AB-gH0"/>
+                                            <outlet property="titleLabel" destination="mjj-Ij-tSj" id="jN9-Yq-BQz"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
