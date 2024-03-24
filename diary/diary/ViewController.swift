@@ -130,7 +130,7 @@ extension ViewController: WriteDiaryViewDelegate {
 extension ViewController: DiaryDetailViewDelegate {
     func didSelectDelete(indexPath: IndexPath) {
         self.diaryList.remove(at: indexPath.row)
-        self.collectionView.deleteItems(at: [])
+        self.collectionView.deleteItems(at: [indexPath])
     }
     // 즐겨찾기 여부 업데이트
     func didSelectStar(indexPath: IndexPath, isStar: Bool) {

@@ -244,6 +244,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="80"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="1zk-Lq-g02" id="TaF-f7-6gG"/>
+                                            <outlet property="titleLabel" destination="mjj-Ij-tSj" id="8iY-gv-m98"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -258,6 +262,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uha-X3-NX9"/>
+                    <connections>
+                        <outlet property="collectionView" destination="0BN-Oq-wQJ" id="U1Q-Sh-ynN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgJ-h5-q9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -413,7 +420,7 @@
     <resources>
         <image name="folder" catalog="system" width="128" height="96"/>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star" catalog="system" width="32" height="32"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
