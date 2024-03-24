@@ -262,6 +262,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uha-X3-NX9"/>
+                    <connections>
+                        <outlet property="collectionView" destination="0BN-Oq-wQJ" id="7YE-Hv-iq0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgJ-h5-q9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
