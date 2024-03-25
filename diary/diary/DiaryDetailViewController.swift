@@ -89,7 +89,15 @@ class DiaryDetailViewController: UIViewController {
             self.starButton?.image = UIImage(systemName: "star.fill")
         }
         self.diary?.isStar = !isStar
-        self.delegate?.didSelectStar(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
+        NotificationCenter.default.post(
+            name: NSNotification.Name("starDiary"),
+            object: [
+                "isStar": self.diary?.isStar ?? false,
+                "indexPath": indexPath
+            ],
+            userInfo: nil
+        )
+        //self.delegate?.didSelectStar(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
     }
     
     // deinit 될때 해당 옵저버 제거
