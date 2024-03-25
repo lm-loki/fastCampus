@@ -89,6 +89,7 @@ class DiaryDetailViewController: UIViewController {
         NotificationCenter.default.post(
             name: NSNotification.Name("starDiary"),
             object: [
+                "diary": self.diary, // 즐겨찾기가 된 일기를 notification으로 전달
                 "isStar": self.diary?.isStar ?? false,
                 "indexPath": indexPath
             ],
