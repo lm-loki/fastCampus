@@ -87,13 +87,14 @@ class WriteDiaryViewController: UIViewController {
         guard let title = self.titleTextField.text else { return }
         guard let contents = self.contentsTextView.text else { return }
         guard let date = self.diaryDate else { return }
-        let diary = Diary(title: title, contents: contents, date: date, isStar: false)
         
         switch self.diaryEditorMode {
         case .new: // new이면 일기를 등록하는 기능
+            let diary = Diary(title: title, contents: contents, date: date, isStar: false)
             self.delegate?.didSelectResgister(diary: diary)
             
-        case let .edit(indexPath, _):
+        case let .edit(indexPath, diary):
+            let diary = Diary(title: title, contents: contents, date: date, isStar: diary.isStar)
             //옵저빙으로 관찰
             NotificationCenter.default.post(
                 name: NSNotification.Name("editDiary"),
