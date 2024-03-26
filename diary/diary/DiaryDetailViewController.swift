@@ -20,6 +20,12 @@ class DiaryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
+        NotificationCenter.default.addObserver(
+          self,
+          selector: #selector(starDiaryNotification(_:)),
+          name: NSNotification.Name("starDiary"),
+          object: nil
+        )
     }
     
     private func configureView() {
@@ -48,6 +54,17 @@ class DiaryDetailViewController: UIViewController {
         self.configureView()
     }
     
+    @objc func starDiaryNotification(_ notification: Notification) {
+      guard let starDiary = notification.object as? [String: Any] else { return }
+      guard let isStar = starDiary["isStar"] as? Bool else { return }
+      guard let uuidString = starDiary["uuidString"] as? String else { return }
+      guard let diary = self.diary else { return }
+      if diary.uuidString == uuidString {
+        self.diary?.isStar = isStar
+        self.configureView()
+      }
+    }
+    
     @IBAction func tapEditButton(_ sender: UIButton) {
         //수정버튼 누를시 WriteDiaryViewController로 넘어감
         guard let viewController = self.storyboard?.instantiateViewController(identifier: "WriteDiaryViewController") as? WriteDiaryViewController else { return }
@@ -65,10 +82,10 @@ class DiaryDetailViewController: UIViewController {
     }
     
     @IBAction func tapDeleteButton(_ sender: UIButton) {
-        guard let indexPath = self.indexPath else { return }
+        guard let uuidString = self.diary?.uuidString else { return }
         NotificationCenter.default.post(
             name: NSNotification.Name("deletDiary"),
-            object: indexPath,
+            object: uuidString,
             userInfo: nil
         )
         self.navigationController?.popViewController(animated: true)
@@ -77,8 +94,7 @@ class DiaryDetailViewController: UIViewController {
     @objc func tapStarButton() {
         //옵셔널 바인딩
         guard let isStar = self.diary?.isStar else { return }
-        guard let indexPath = self.indexPath else { return }
-
+        
         //즐겨찾기 토글
         if isStar {
             self.starButton?.image = UIImage(systemName: "star")
@@ -91,7 +107,7 @@ class DiaryDetailViewController: UIViewController {
             object: [
                 "diary": self.diary, // 즐겨찾기가 된 일기를 notification으로 전달
                 "isStar": self.diary?.isStar ?? false,
-                "indexPath": indexPath
+                "uuidString": diary?.uuidString
             ],
             userInfo: nil
         )

@@ -90,18 +90,27 @@ class WriteDiaryViewController: UIViewController {
         
         switch self.diaryEditorMode {
         case .new: // new이면 일기를 등록하는 기능
-            let diary = Diary(title: title, contents: contents, date: date, isStar: false)
+            let diary = Diary(
+                uuidString: UUID().uuidString,
+                title: title,
+                contents: contents,
+                date: date,
+                isStar: false)
             self.delegate?.didSelectResgister(diary: diary)
             
         case let .edit(indexPath, diary):
-            let diary = Diary(title: title, contents: contents, date: date, isStar: diary.isStar)
+            let diary = Diary(
+                uuidString: diary.uuidString,
+                title: title,
+                contents: contents,
+                date: date,
+                isStar: false)
             //옵저빙으로 관찰
             NotificationCenter.default.post(
                 name: NSNotification.Name("editDiary"),
                 object: diary, // 전달할 객체
-                userInfo: [ // 수정값 전달
-                    "indexPath.row": indexPath.row
-                ]) 
+                userInfo: nil
+            ) 
         }
         
         self.navigationController?.popViewController(animated: true)
