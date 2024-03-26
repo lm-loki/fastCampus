@@ -65,10 +65,10 @@ class DiaryDetailViewController: UIViewController {
     }
     
     @IBAction func tapDeleteButton(_ sender: UIButton) {
-        guard let indexPath = self.indexPath else { return }
+        guard let uuidString = self.diary?.uuidString else { return }
         NotificationCenter.default.post(
             name: NSNotification.Name("deletDiary"),
-            object: indexPath,
+            object: uuidString,
             userInfo: nil
         )
         self.navigationController?.popViewController(animated: true)
@@ -77,8 +77,7 @@ class DiaryDetailViewController: UIViewController {
     @objc func tapStarButton() {
         //옵셔널 바인딩
         guard let isStar = self.diary?.isStar else { return }
-        guard let indexPath = self.indexPath else { return }
-
+        
         //즐겨찾기 토글
         if isStar {
             self.starButton?.image = UIImage(systemName: "star")
@@ -91,7 +90,7 @@ class DiaryDetailViewController: UIViewController {
             object: [
                 "diary": self.diary, // 즐겨찾기가 된 일기를 notification으로 전달
                 "isStar": self.diary?.isStar ?? false,
-                "indexPath": indexPath
+                "uuidString": diary?.uuidString
             ],
             userInfo: nil
         )
