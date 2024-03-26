@@ -67,10 +67,10 @@ class ViewController: UIViewController {
     }
     
     @objc func deleteDiaryNotification(_ notification: Notification) {
-        //post로 전달한 IndexPath를 가져옴
-        guard let indexPath = notification.object as? IndexPath else { return }
-        self.diaryList.remove(at: indexPath.row)
-        self.collectionView.deleteItems(at: [indexPath])
+        guard let uuidString = notification.object as? String else { return }
+        guard let index = self.diaryList.firstIndex(where: { $0.uuidString == uuidString }) else { return }
+        self.diaryList.remove(at: index)
+        self.collectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,6 +104,9 @@ class ViewController: UIViewController {
             guard let isStar = $0["isStar"] as? Bool else { return nil }
             return Diary(uuidString: uuidString, title: title, contents: contents, date: date, isStar: isStar)
         }
+        self.diaryList = self.diaryList.sorted(by: {
+            $0.date.compare($1.date) == .orderedDescending
+        })
     }
     
     private func dateToString(date: Date) -> String {
