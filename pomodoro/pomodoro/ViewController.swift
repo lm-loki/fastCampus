@@ -41,6 +41,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tapCancelButton(_ sender: UIButton) {
+        switch self.timerStatus {
+        case .start, .pause:
+            self.timerStatus = .end
+            self.cancelButton.isEnabled = false
+            self.setTimerInfoViewVisible(isHidden: true)
+            self.datePicker.isHidden = false
+            self.toggleButton.isSelected = false
+            
+        default:
+            break
+            
+        }
     }
     
     @IBAction func tapToggleButton(_ sender: UIButton) {
@@ -48,6 +60,7 @@ class ViewController: UIViewController {
         switch self.timerStatus {
         case .start:
             self.timerStatus = .pause
+            self.toggleButton.isSelected = false
             
         case .end:
             self.timerStatus = .start
@@ -56,8 +69,9 @@ class ViewController: UIViewController {
             self.toggleButton.isSelected = true
             self.cancelButton.isEnabled = true
             
-        default:
-            break
+        case .pause:
+            self.timerStatus = .start
+            self.toggleButton.isSelected = true
         }
     }
     
