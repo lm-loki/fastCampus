@@ -28,10 +28,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mj5-GC-tON">
+                            <progressView opaque="NO" alpha="0.0" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mj5-GC-tON">
                                 <rect key="frame" x="48" y="353" width="297" height="4"/>
                             </progressView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-dS-aez">
+                            <datePicker alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-dS-aez">
                                 <rect key="frame" x="0.0" y="213" width="393" height="216"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="a0q-hH-jPQ">
@@ -78,6 +78,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="tBc-Rg-gRs" id="Mr3-0S-9Qh"/>
                         <outlet property="datePicker" destination="n9f-dS-aez" id="AlX-sT-CsP"/>
+                        <outlet property="imageView" destination="Oib-hb-P0N" id="f2l-ob-dCb"/>
                         <outlet property="progressView" destination="Mj5-GC-tON" id="PbW-S2-7dl"/>
                         <outlet property="timerLabel" destination="iAG-Me-HwE" id="hdp-1S-ogE"/>
                         <outlet property="toggleButton" destination="cp1-sj-0BB" id="5bX-7j-Z6y"/>
