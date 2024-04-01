@@ -29,7 +29,7 @@
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0nO-9F-L1u">
                                 <rect key="frame" x="24" y="231.33333333333331" width="345" height="143.33333333333331"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LWC-Hk-7Su">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LWC-Hk-7Su">
                                         <rect key="frame" x="151" y="0.0" width="43.333333333333343" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYv-4a-wV3">
@@ -39,18 +39,18 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맑음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb5-U7-N6G">
-                                                <rect key="frame" x="0.0" y="37.999999999999972" width="43.333333333333336" height="24"/>
+                                                <rect key="frame" x="4.3333333333333428" y="37.999999999999972" width="34.666666666666664" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="yKK-AY-lWg">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="yKK-AY-lWg">
                                         <rect key="frame" x="89" y="71.999999999999972" width="167" height="71.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXJ-wW-dC6">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="48"/>
+                                                <rect key="frame" x="41.33333333333335" y="0.0" width="84.666666666666686" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -91,6 +91,15 @@
                             <constraint firstItem="IcB-Ma-lbB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="j7Z-8M-8sg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="kYv-4a-wV3" id="vAw-bx-gRe"/>
+                        <outlet property="cityNameTextField" destination="IcB-Ma-lbB" id="iwx-IS-G0r"/>
+                        <outlet property="maxTempLabel" destination="W1c-OL-b0j" id="Oey-5S-b14"/>
+                        <outlet property="minTempLabel" destination="jCD-Ml-PGJ" id="BjT-zR-kZn"/>
+                        <outlet property="tapFetchWeatherButton" destination="274-oR-lrm" id="1MU-WS-ACZ"/>
+                        <outlet property="tempLabel" destination="NXJ-wW-dC6" id="wNK-8U-ezE"/>
+                        <outlet property="weatherDescriptionLabel" destination="sb5-U7-N6G" id="OLf-qp-6TQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

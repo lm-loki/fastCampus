@@ -9,9 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var cityNameTextField: UITextField!
+    
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var weatherDescriptionLabel: UILabel!
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var maxTempLabel: UILabel!
+    @IBOutlet weak var minTempLabel: UILabel!
+    
+    @IBOutlet weak var tapFetchWeatherButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
