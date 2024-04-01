@@ -25,6 +25,9 @@
                                 <rect key="frame" x="138.33333333333334" y="147" width="116.66666666666666" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="날씨 가져오기"/>
+                                <connections>
+                                    <action selector="tapFetchWeatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BqZ-5f-OHu"/>
+                                </connections>
                             </button>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0nO-9F-L1u">
                                 <rect key="frame" x="24" y="231.33333333333331" width="345" height="143.33333333333331"/>
@@ -96,7 +99,6 @@
                         <outlet property="cityNameTextField" destination="IcB-Ma-lbB" id="iwx-IS-G0r"/>
                         <outlet property="maxTempLabel" destination="W1c-OL-b0j" id="Oey-5S-b14"/>
                         <outlet property="minTempLabel" destination="jCD-Ml-PGJ" id="BjT-zR-kZn"/>
-                        <outlet property="tapFetchWeatherButton" destination="274-oR-lrm" id="1MU-WS-ACZ"/>
                         <outlet property="tempLabel" destination="NXJ-wW-dC6" id="wNK-8U-ezE"/>
                         <outlet property="weatherDescriptionLabel" destination="sb5-U7-N6G" id="OLf-qp-6TQ"/>
                     </connections>
