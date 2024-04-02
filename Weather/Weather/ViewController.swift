@@ -39,6 +39,11 @@ class ViewController: UIViewController {
         self.maxTempLabel.text = "\(Int(weatherInformation.temp.maxTemp - 273.15))°C"
     }
     
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "에러", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     func getCurrentWeather(cityName: String) {
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=86db344c062cc036988e3d35513e7428") else { return }
         let session = URLSession(configuration: .default)
@@ -57,7 +62,9 @@ class ViewController: UIViewController {
                 }
             } else {
                 guard let errorMessage = try? decoder.decode(ErrorMessage.self, from: data) else { return }
-                debugPrint(errorMessage)
+                DispatchQueue.main.async {
+                    self?.showAlert(message: errorMessage.message)
+                }
             }
         }.resume()
     }
