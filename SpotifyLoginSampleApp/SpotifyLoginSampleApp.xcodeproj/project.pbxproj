@@ -58,11 +58,11 @@
 			children = (
 				01F9F9052BBEEAD400C8B51B /* AppDelegate.swift */,
 				01F9F9072BBEEAD400C8B51B /* SceneDelegate.swift */,
+				01F9F9192BBEF44600C8B51B /* LoginViewController.swift */,
 				01F9F90B2BBEEAD400C8B51B /* Main.storyboard */,
 				01F9F90E2BBEEAD500C8B51B /* Assets.xcassets */,
 				01F9F9102BBEEAD500C8B51B /* LaunchScreen.storyboard */,
 				01F9F9132BBEEAD500C8B51B /* Info.plist */,
-				01F9F9192BBEF44600C8B51B /* LoginViewController.swift */,
 			);
 			path = SpotifyLoginSampleApp;
 			sourceTree = "<group>";
