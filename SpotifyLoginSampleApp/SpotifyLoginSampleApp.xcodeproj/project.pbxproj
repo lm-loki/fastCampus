@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0158C1362BC2C536008AB753 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158C1352BC2C536008AB753 /* MainViewController.swift */; };
 		01F9F9062BBEEAD400C8B51B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9F9052BBEEAD400C8B51B /* AppDelegate.swift */; };
 		01F9F9082BBEEAD400C8B51B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9F9072BBEEAD400C8B51B /* SceneDelegate.swift */; };
 		01F9F90D2BBEEAD400C8B51B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 01F9F90C2BBEEAD400C8B51B /* Base */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0158C1352BC2C536008AB753 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		01F9F9022BBEEAD400C8B51B /* SpotifyLoginSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyLoginSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9F9052BBEEAD400C8B51B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01F9F9072BBEEAD400C8B51B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				01F9F9072BBEEAD400C8B51B /* SceneDelegate.swift */,
 				01F9F9192BBEF44600C8B51B /* LoginViewController.swift */,
 				01F9F91B2BC17E6A00C8B51B /* EnterEmailViewController.swift */,
+				0158C1352BC2C536008AB753 /* MainViewController.swift */,
 				01F9F90B2BBEEAD400C8B51B /* Main.storyboard */,
 				01F9F90E2BBEEAD500C8B51B /* Assets.xcassets */,
 				01F9F9102BBEEAD500C8B51B /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				01F9F9062BBEEAD400C8B51B /* AppDelegate.swift in Sources */,
 				01F9F91C2BC17E6A00C8B51B /* EnterEmailViewController.swift in Sources */,
 				01F9F9082BBEEAD400C8B51B /* SceneDelegate.swift in Sources */,
+				0158C1362BC2C536008AB753 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
