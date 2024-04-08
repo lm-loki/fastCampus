@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0158C1362BC2C536008AB753 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158C1352BC2C536008AB753 /* MainViewController.swift */; };
-		0158C1382BC3BE0B008AB753 /* Firebase GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0158C1372BC3BE0B008AB753 /* Firebase GoogleService-Info.plist */; };
+		0158C1382BC3BE0B008AB753 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0158C1372BC3BE0B008AB753 /* GoogleService-Info.plist */; };
 		01F9F9062BBEEAD400C8B51B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9F9052BBEEAD400C8B51B /* AppDelegate.swift */; };
 		01F9F9082BBEEAD400C8B51B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9F9072BBEEAD400C8B51B /* SceneDelegate.swift */; };
 		01F9F90D2BBEEAD400C8B51B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 01F9F90C2BBEEAD400C8B51B /* Base */; };
@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0158C1352BC2C536008AB753 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		0158C1372BC3BE0B008AB753 /* Firebase GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Firebase GoogleService-Info.plist"; path = "../../../../../Downloads/Firebase GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0158C1372BC3BE0B008AB753 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01F9F9022BBEEAD400C8B51B /* SpotifyLoginSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyLoginSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9F9052BBEEAD400C8B51B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01F9F9072BBEEAD400C8B51B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 				01F9F90E2BBEEAD500C8B51B /* Assets.xcassets */,
 				01F9F9102BBEEAD500C8B51B /* LaunchScreen.storyboard */,
 				01F9F9132BBEEAD500C8B51B /* Info.plist */,
-				0158C1372BC3BE0B008AB753 /* Firebase GoogleService-Info.plist */,
+				0158C1372BC3BE0B008AB753 /* GoogleService-Info.plist */,
 			);
 			path = SpotifyLoginSampleApp;
 			sourceTree = "<group>";
@@ -89,7 +89,6 @@
 				93597FE0C6B7BC1D59570069 /* Pods-SpotifyLoginSampleApp.debug.xcconfig */,
 				FF505463C14830035B680541 /* Pods-SpotifyLoginSampleApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -162,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F9F90F2BBEEAD500C8B51B /* Assets.xcassets in Resources */,
-				0158C1382BC3BE0B008AB753 /* Firebase GoogleService-Info.plist in Resources */,
+				0158C1382BC3BE0B008AB753 /* GoogleService-Info.plist in Resources */,
 				01F9F9122BBEEAD500C8B51B /* Base in Resources */,
 				01F9F90D2BBEEAD400C8B51B /* Base in Resources */,
 			);
@@ -284,7 +283,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -347,7 +346,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

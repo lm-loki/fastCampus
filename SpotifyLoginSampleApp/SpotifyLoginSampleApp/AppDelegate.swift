@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //firebase 초기화
         FirebaseApp.configure()
-        
         return true
     }
 
