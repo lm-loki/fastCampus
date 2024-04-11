@@ -19,22 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FirebaseAppCheckInterop.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FirebaseAuth-FirebaseAuth_Privacy.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>FirebaseAuth.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FirebaseCore-FirebaseCore_Privacy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -44,7 +29,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FirebaseCoreInternal-FirebaseCoreInternal_Privacy.xcscheme</key>
+		<key>FirebaseCoreDiagnostics.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -54,17 +39,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GTMAppAuth-GTMAppAuth_Privacy.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>GTMAppAuth.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>GTMSessionFetcher-GTMSessionFetcher_Core_Privacy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -74,7 +49,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GoogleSignIn-GoogleSignIn.xcscheme</key>
+		<key>GoogleDataTransport-GoogleDataTransport_Privacy.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GoogleDataTransport.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -109,7 +89,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RecaptchaInterop.xcscheme</key>
+		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

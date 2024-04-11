@@ -15,9 +15,6 @@
  */
 
 #import "FirebaseAuth/Sources/Public/FirebaseAuth/FIROAuthProvider.h"
-
-#import <FirebaseAppCheckInterop/FirebaseAppCheckInterop.h>
-
 #include <CommonCrypto/CommonCrypto.h>
 #import "FirebaseAuth/Sources/Public/FirebaseAuth/FIRFacebookAuthProvider.h"
 #import "FirebaseAuth/Sources/Public/FirebaseAuth/FIROAuthCredential.h"
@@ -91,7 +88,6 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                                rawNonce:nil
                                             accessToken:accessToken
                                                  secret:nil
-                                               fullName:nil
                                            pendingToken:nil];
 }
 
@@ -102,7 +98,6 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                                rawNonce:nil
                                             accessToken:accessToken
                                                  secret:nil
-                                               fullName:nil
                                            pendingToken:nil];
 }
 
@@ -115,7 +110,6 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                                rawNonce:rawNonce
                                             accessToken:accessToken
                                                  secret:nil
-                                               fullName:nil
                                            pendingToken:nil];
 }
 
@@ -127,19 +121,6 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                                rawNonce:rawNonce
                                             accessToken:nil
                                                  secret:nil
-                                               fullName:nil
-                                           pendingToken:nil];
-}
-
-+ (FIROAuthCredential *)appleCredentialWithIDToken:(NSString *)IDToken
-                                          rawNonce:(nullable NSString *)rawNonce
-                                          fullName:(nullable NSPersonNameComponents *)fullName {
-  return [[FIROAuthCredential alloc] initWithProviderID:@"apple.com"
-                                                IDToken:IDToken
-                                               rawNonce:rawNonce
-                                            accessToken:nil
-                                                 secret:nil
-                                               fullName:fullName
                                            pendingToken:nil];
 }
 
@@ -151,7 +132,7 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
   return [[self alloc] initWithProviderID:providerID auth:auth];
 }
 
-#if TARGET_OS_IOS && (!defined(TARGET_OS_VISION) || !TARGET_OS_VISION)
+#if TARGET_OS_IOS
 - (void)getCredentialWithUIDelegate:(nullable id<FIRAuthUIDelegate>)UIDelegate
                          completion:(nullable FIRAuthCredentialCallback)completion {
   if (![FIRAuthWebUtils isCallbackSchemeRegisteredForCustomURLScheme:self->_callbackScheme]) {
@@ -218,7 +199,7 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                           }];
   });
 }
-#endif  // TARGET_OS_IOS && (!defined(TARGET_OS_VISION) || !TARGET_OS_VISION)
+#endif  // TARGET_OS_IOS
 
 #pragma mark - Internal Methods
 
@@ -328,8 +309,6 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                      NSString *apiKey =
                                          strongSelf->_auth.requestConfiguration.APIKey;
                                      NSString *tenantID = strongSelf->_auth.tenantID;
-                                     id<FIRAppCheckInterop> appCheck =
-                                         strongSelf->_auth.requestConfiguration.appCheck;
                                      NSMutableDictionary *urlArguments = [@{
                                        @"apiKey" : apiKey,
                                        @"authType" : kAuthTypeSignInWithRedirect,
@@ -366,7 +345,6 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                        urlArguments[@"hl"] =
                                            strongSelf->_auth.requestConfiguration.languageCode;
                                      }
-
                                      NSString *argumentsString = [strongSelf
                                          httpArgumentsStringForArgsDictionary:urlArguments];
                                      NSString *URLString;
@@ -380,41 +358,16 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                            [NSString stringWithFormat:kHeadfulLiteURLStringFormat,
                                                                       authDomain, argumentsString];
                                      }
-                                     NSCharacterSet *set =
-                                         [NSCharacterSet URLFragmentAllowedCharacterSet];
-                                     NSURLComponents *components = [[NSURLComponents alloc]
-                                         initWithString:
-                                             [URLString
-                                                 stringByAddingPercentEncodingWithAllowedCharacters:
-                                                     set]];
-                                     if (appCheck) {
-                                       [appCheck
-                                           getTokenForcingRefresh:false
-                                                       completion:^(
-                                                           id<FIRAppCheckTokenResultInterop> _Nonnull tokenResult) {
-                                                         if (tokenResult.error) {
-                                                           FIRLogWarning(
-                                                               kFIRLoggerAuth, @"I-AUT000018",
-                                                               @"Error getting App Check token; "
-                                                               @"using placeholder token "
-                                                               @"instead. Error: %@",
-                                                               tokenResult.error);
-                                                         }
-                                                         NSString *appCheckTokenFragment = [@"fac="
-                                                             stringByAppendingString:tokenResult
-                                                                                         .token];
-                                                         [components
-                                                             setFragment:appCheckTokenFragment];
-
-                                                         if (completion) {
-                                                           completion([components URL], nil);
-                                                         }
-                                                       }];
-
-                                     } else {
-                                       if (completion) {
-                                         completion([components URL], nil);
-                                       }
+                                     if (completion) {
+                                       NSCharacterSet *set =
+                                           [NSCharacterSet URLFragmentAllowedCharacterSet];
+                                       completion(
+                                           [NSURL
+                                               URLWithString:
+                                                   [URLString
+                                                       stringByAddingPercentEncodingWithAllowedCharacters:
+                                                           set]],
+                                           nil);
                                      }
                                    }];
 }

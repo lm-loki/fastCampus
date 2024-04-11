@@ -29,9 +29,13 @@ class LoginViewController: UIViewController {
         
         //Navigation Bar 숨기기
         navigationController?.navigationBar.isHidden = true
+        
+        //Google Sign In
+        GIDSignIn.sharedInstance().presentingViewController = self
     }
     
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
+        GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func appleLoginButtonTapped(_ sender: UIButton) {

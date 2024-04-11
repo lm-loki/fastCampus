@@ -15,9 +15,7 @@
  */
 
 #import <TargetConditionals.h>
-#if TARGET_OS_IOS && (!defined(TARGET_OS_VISION) || !TARGET_OS_VISION)
-
-#import <FirebaseAppCheckInterop/FirebaseAppCheckInterop.h>
+#if TARGET_OS_IOS
 
 #import "FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthSettings.h"
 #import "FirebaseAuth/Sources/Public/FirebaseAuth/FIRMultiFactorResolver.h"
@@ -529,7 +527,7 @@ extern NSString *const FIRPhoneMultiFactorID;
                                                   } else {
                                                     if (callback) {
                                                       callback(
-                                                          response.phoneSessionInfo.sessionInfo,
+                                                          response.enrollmentResponse.sessionInfo,
                                                           nil);
                                                     }
                                                   }
@@ -595,17 +593,6 @@ extern NSString *const FIRPhoneMultiFactorID;
  */
 - (void)verifyClientWithUIDelegate:(nullable id<FIRAuthUIDelegate>)UIDelegate
                         completion:(FIRVerifyClientCallback)completion {
-// Remove the simulator check below after FCM supports APNs in simulators
-#if TARGET_OS_SIMULATOR
-  if (@available(iOS 16, *)) {
-    NSDictionary *environment = [[NSProcessInfo processInfo] environment];
-    if ((environment[@"XCTestConfigurationFilePath"] == nil)) {
-      [self reCAPTCHAFlowWithUIDelegate:UIDelegate completion:completion];
-      return;
-    }
-  }
-#endif
-
   if (_auth.appCredentialManager.credential) {
     completion(_auth.appCredentialManager.credential, nil, nil);
     return;
@@ -713,16 +700,13 @@ extern NSString *const FIRPhoneMultiFactorID;
                                      if (error) {
                                        if (completion) {
                                          completion(nil, error);
+                                         return;
                                        }
-                                       return;
                                      }
                                      NSString *bundleID = [NSBundle mainBundle].bundleIdentifier;
                                      NSString *clientID = self->_auth.app.options.clientID;
                                      NSString *appID = self->_auth.app.options.googleAppID;
                                      NSString *apiKey = self->_auth.requestConfiguration.APIKey;
-                                     id<FIRAppCheckInterop> appCheck =
-                                         self->_auth.requestConfiguration.appCheck;
-
                                      NSMutableArray<NSURLQueryItem *> *queryItems = [@[
                                        [NSURLQueryItem queryItemWithName:@"apiKey" value:apiKey],
                                        [NSURLQueryItem queryItemWithName:@"authType"
@@ -743,6 +727,7 @@ extern NSString *const FIRPhoneMultiFactorID;
                                            addObject:[NSURLQueryItem queryItemWithName:@"appId"
                                                                                  value:appID]];
                                      }
+
                                      if (self->_auth.requestConfiguration.languageCode) {
                                        [queryItems
                                            addObject:[NSURLQueryItem
@@ -756,32 +741,8 @@ extern NSString *const FIRPhoneMultiFactorID;
                                              [NSString stringWithFormat:kReCAPTCHAURLStringFormat,
                                                                         authDomain]];
                                      [components setQueryItems:queryItems];
-                                     if (appCheck) {
-                                       [appCheck
-                                           getTokenForcingRefresh:false
-                                                       completion:^(
-                                                           id<FIRAppCheckTokenResultInterop> _Nonnull tokenResult) {
-                                                         if (tokenResult.error) {
-                                                           FIRLogWarning(
-                                                               kFIRLoggerAuth, @"I-AUT000018",
-                                                               @"Error getting App Check token; "
-                                                               @"using placeholder token "
-                                                               @"instead. Error: %@",
-                                                               tokenResult.error);
-                                                         }
-                                                         NSString *appCheckTokenFragment = [@"fac="
-                                                             stringByAppendingString:tokenResult
-                                                                                         .token];
-                                                         [components
-                                                             setFragment:appCheckTokenFragment];
-                                                         if (completion) {
-                                                           completion([components URL], nil);
-                                                         }
-                                                       }];
-                                     } else {
-                                       if (completion) {
-                                         completion([components URL], nil);
-                                       }
+                                     if (completion) {
+                                       completion([components URL], nil);
                                      }
                                    }];
 }
@@ -790,4 +751,4 @@ extern NSString *const FIRPhoneMultiFactorID;
 
 NS_ASSUME_NONNULL_END
 
-#endif  // TARGET_OS_IOS && (!defined(TARGET_OS_VISION) || !TARGET_OS_VISION)
+#endif

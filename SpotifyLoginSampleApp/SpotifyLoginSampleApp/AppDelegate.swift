@@ -44,7 +44,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print("ERROR Google Sign In \(error.localizedDescription)")
+            return
+        }
         
+        guard let authentication = user.authentication else { return }
+        let credetial = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken) // 구글계정에 인증토큰 부여
+        
+        Auth.auth().signIn(with: credetial) { _, _ in
+            self.showMainViewController()
+        }
+    }
+    
+    private func showMainViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainViewController = storyboard.instantiateViewController(identifier: "MainViewController")
+        mainViewController.modalPresentationStyle = .fullScreen
+        UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
     }
 }
 
