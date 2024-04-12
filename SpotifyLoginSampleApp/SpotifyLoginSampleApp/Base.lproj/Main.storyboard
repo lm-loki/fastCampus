@@ -235,7 +235,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHQ-hB-Wy8">
-                                <rect key="frame" x="153" y="473.66666666666669" width="87" height="36"/>
+                                <rect key="frame" x="153" y="528.66666666666663" width="87" height="36"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그아웃">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
@@ -245,23 +245,36 @@
                                     <action selector="logoutButtonTapped:" destination="WYa-Ga-xqJ" eventType="touchUpInside" id="9dY-bL-EBq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ot-5U-B27">
+                                <rect key="frame" x="138.33333333333334" y="473.66666666666669" width="116.66666666666666" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비밀번호 변경">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="WYa-Ga-xqJ" eventType="touchUpInside" id="KpZ-GO-SxU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PUe-q6-Xlm"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wHQ-hB-Wy8" firstAttribute="top" secondItem="472-Yn-OUd" secondAttribute="bottom" constant="20" id="5WP-8P-gWg"/>
                             <constraint firstItem="472-Yn-OUd" firstAttribute="centerY" secondItem="PUe-q6-Xlm" secondAttribute="centerY" id="8Vf-U9-iqi"/>
                             <constraint firstItem="472-Yn-OUd" firstAttribute="centerX" secondItem="PUe-q6-Xlm" secondAttribute="centerX" id="B1I-Am-hKg"/>
+                            <constraint firstItem="wHQ-hB-Wy8" firstAttribute="top" secondItem="2ot-5U-B27" secondAttribute="bottom" constant="20" id="Jbj-TN-lju"/>
+                            <constraint firstItem="2ot-5U-B27" firstAttribute="centerX" secondItem="PUe-q6-Xlm" secondAttribute="centerX" id="PE4-nf-M6N"/>
+                            <constraint firstItem="2ot-5U-B27" firstAttribute="top" secondItem="472-Yn-OUd" secondAttribute="bottom" constant="20" id="hGP-HF-BaF"/>
                             <constraint firstItem="wHQ-hB-Wy8" firstAttribute="centerX" secondItem="PUe-q6-Xlm" secondAttribute="centerX" id="tKk-I2-uW9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetPasswordButton" destination="2ot-5U-B27" id="8uY-e2-Avb"/>
                         <outlet property="welcomeLabel" destination="472-Yn-OUd" id="haR-2s-zhN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ag3-LZ-gak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2565" y="-32"/>
+            <point key="canvasLocation" x="2564.1221374045799" y="-32.394366197183103"/>
         </scene>
     </scenes>
     <resources>

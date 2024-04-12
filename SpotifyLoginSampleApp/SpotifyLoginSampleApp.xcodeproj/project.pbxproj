@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010C68092BC919E40081D363 /* GTMAppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMAppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0158C1352BC2C536008AB753 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0158C1392BC67E64008AB753 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01F9F9022BBEEAD400C8B51B /* SpotifyLoginSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyLoginSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +96,7 @@
 		92ED991A5456B27815D8B5C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				010C68092BC919E40081D363 /* GTMAppAuth.framework */,
 				EDF5F645CB8EAD63778658BD /* Pods_SpotifyLoginSampleApp.framework */,
 			);
 			name = Frameworks;
