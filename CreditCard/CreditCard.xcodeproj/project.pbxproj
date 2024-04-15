@@ -19,6 +19,7 @@
 		010C68322BCA59140081D363 /* CardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C682F2BCA59140081D363 /* CardListCell.swift */; };
 		010C68342BCA6B860081D363 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C68332BCA6B860081D363 /* CardDetailViewController.swift */; };
 		010C68372BCBB6E00081D363 /* money.json in Resources */ = {isa = PBXBuildFile; fileRef = 010C68352BCBB0070081D363 /* money.json */; };
+		010C68392BCD079C0081D363 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 010C68382BCD079C0081D363 /* GoogleService-Info.plist */; };
 		7CF076920567A3F55BBB33A7 /* Pods_CreditCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1991A4FACC99308A4037D6 /* Pods_CreditCard.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		010C68302BCA59140081D363 /* CardListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardListCell.xib; sourceTree = "<group>"; };
 		010C68332BCA6B860081D363 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		010C68352BCBB0070081D363 /* money.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = money.json; sourceTree = "<group>"; };
+		010C68382BCD079C0081D363 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A8661996E2D5338CBEF1D42 /* Pods-CreditCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCard.debug.xcconfig"; path = "Target Support Files/Pods-CreditCard/Pods-CreditCard.debug.xcconfig"; sourceTree = "<group>"; };
 		D0B74B106B14BC1D4100556F /* Pods-CreditCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCard.release.xcconfig"; path = "Target Support Files/Pods-CreditCard/Pods-CreditCard.release.xcconfig"; sourceTree = "<group>"; };
 		EF1991A4FACC99308A4037D6 /* Pods_CreditCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreditCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 				010C68202BCA52F50081D363 /* Assets.xcassets */,
 				010C68222BCA52F50081D363 /* LaunchScreen.storyboard */,
 				010C68252BCA52F50081D363 /* Info.plist */,
+				010C68382BCD079C0081D363 /* GoogleService-Info.plist */,
 			);
 			path = CreditCard;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				010C68372BCBB6E00081D363 /* money.json in Resources */,
 				010C681F2BCA52F30081D363 /* Base in Resources */,
 				010C68312BCA59140081D363 /* CardListCell.xib in Resources */,
+				010C68392BCD079C0081D363 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
