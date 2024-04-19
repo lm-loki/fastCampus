@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoticeViewController" customModule="Notice" customModuleProvider="target">
+            <connections>
+                <outlet property="dateLabel" destination="Tq4-fX-WeW" id="2gG-JB-NqF"/>
+                <outlet property="detailLabel" destination="exx-7b-7nB" id="eL6-1s-eZN"/>
+                <outlet property="noticeView" destination="WR8-Y8-895" id="1Vl-aY-no0"/>
+                <outlet property="titleLabel" destination="fq3-y7-YcV" id="pVE-hZ-eNY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WR8-Y8-895">
+                    <rect key="frame" x="46.666666666666657" y="238.66666666666663" width="300" height="400"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qaX-PL-GTy">
+                            <rect key="frame" x="20" y="20.000000000000028" width="260" height="360"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공지사항" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="799-S4-AAJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="35.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안내드립니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq3-y7-YcV">
+                                    <rect key="frame" x="0.0" y="45.333333333333307" width="260" height="71.333333333333314"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서비스 이용에 참고 부탁드립니다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exx-7b-7nB">
+                                    <rect key="frame" x="0.0" y="126.66666666666664" width="260" height="35.666666666666671"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 점검 일시" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFn-d5-ahC">
+                                    <rect key="frame" x="0.0" y="172.33333333333331" width="260" height="31.666666666666657"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년 1월 31일(월) 00:00-03:00(3시간)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq4-fX-WeW">
+                                    <rect key="frame" x="0.0" y="214" width="260" height="76"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbR-OT-fqd">
+                                    <rect key="frame" x="0.0" y="299.99999999999994" width="260" height="60"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="8qo-hw-WYO"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="확인">
+                                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="doneButtonTapped:" destination="-1" eventType="touchUpInside" id="kwz-ZX-Jpy"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="fbR-OT-fqd" firstAttribute="leading" secondItem="qaX-PL-GTy" secondAttribute="leading" id="b5x-5W-1Wr"/>
+                                <constraint firstAttribute="trailing" secondItem="fbR-OT-fqd" secondAttribute="trailing" id="dUc-P9-ef0"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="qaX-PL-GTy" firstAttribute="top" secondItem="WR8-Y8-895" secondAttribute="top" constant="20" id="8jg-yp-viR"/>
+                        <constraint firstItem="qaX-PL-GTy" firstAttribute="leading" secondItem="WR8-Y8-895" secondAttribute="leading" constant="20" id="JHX-De-suS"/>
+                        <constraint firstItem="qaX-PL-GTy" firstAttribute="leading" secondItem="WR8-Y8-895" secondAttribute="leading" constant="20" id="O8f-dX-kcb"/>
+                        <constraint firstAttribute="height" constant="400" id="R8p-Ic-gZ2"/>
+                        <constraint firstItem="qaX-PL-GTy" firstAttribute="top" secondItem="WR8-Y8-895" secondAttribute="top" constant="20" id="SVF-dE-gBE"/>
+                        <constraint firstAttribute="width" constant="300" id="YLk-p2-9tB"/>
+                        <constraint firstAttribute="bottom" secondItem="qaX-PL-GTy" secondAttribute="bottom" constant="20" id="jXr-7t-dhE"/>
+                        <constraint firstAttribute="trailing" secondItem="qaX-PL-GTy" secondAttribute="trailing" constant="20" id="lrO-CM-jN7"/>
+                        <constraint firstAttribute="trailing" secondItem="qaX-PL-GTy" secondAttribute="trailing" constant="20" id="tc5-R0-vXi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WR8-Y8-895" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="sNK-5k-4wr"/>
+                <constraint firstItem="WR8-Y8-895" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="uv6-EW-Uvt"/>
+            </constraints>
+            <point key="canvasLocation" x="114" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
