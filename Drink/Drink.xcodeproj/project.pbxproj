@@ -16,6 +16,7 @@
 		010C68882BD789F60081D363 /* AlertListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C68862BD789F60081D363 /* AlertListCell.swift */; };
 		010C68892BD789F60081D363 /* AlertListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010C68872BD789F60081D363 /* AlertListCell.xib */; };
 		010C688B2BD78F830081D363 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C688A2BD78F830081D363 /* Alert.swift */; };
+		010C688D2BD94C410081D363 /* AddAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C688C2BD94C410081D363 /* AddAlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		010C68862BD789F60081D363 /* AlertListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListCell.swift; sourceTree = "<group>"; };
 		010C68872BD789F60081D363 /* AlertListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertListCell.xib; sourceTree = "<group>"; };
 		010C688A2BD78F830081D363 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		010C688C2BD94C410081D363 /* AddAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				010C68842BD785E30081D363 /* AlertListViewController.swift */,
 				010C688A2BD78F830081D363 /* Alert.swift */,
 				010C68762BD785650081D363 /* Main.storyboard */,
+				010C688C2BD94C410081D363 /* AddAlertViewController.swift */,
 				010C68862BD789F60081D363 /* AlertListCell.swift */,
 				010C68872BD789F60081D363 /* AlertListCell.xib */,
 				010C68792BD785660081D363 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 				010C68882BD789F60081D363 /* AlertListCell.swift in Sources */,
 				010C688B2BD78F830081D363 /* Alert.swift in Sources */,
 				010C68852BD785E30081D363 /* AlertListViewController.swift in Sources */,
+				010C688D2BD94C410081D363 /* AddAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

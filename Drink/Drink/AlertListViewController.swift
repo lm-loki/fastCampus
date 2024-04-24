@@ -17,7 +17,21 @@ class AlertListViewController: UITableViewController {
         tableView.register(nibName, forCellReuseIdentifier: "AlertListCell")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     @IBAction func addAlertButtonAction(_ sender: UIBarButtonItem) {
+        guard let addAlertVC = storyboard?.instantiateViewController(identifier: "AddAlertViewController") as? AddAlertViewController else { return }
+        
+        addAlertVC.pickedDate = {[weak self] date in
+            guard let self = self else { return }
+            
+            let newAlert = Alert(date: date, isOn: true)
+            
+        }
+        
+        self.present(addAlertVC, animated: true, completion: nil)
     }
 }
 
