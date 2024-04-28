@@ -75,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="hXr-LX-xxT">
-                                <rect key="frame" x="220" y="169" width="193" height="50"/>
+                                <rect key="frame" x="220" y="168.66666666666666" width="193" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bD8-k4-743"/>
                                     <constraint firstAttribute="width" constant="193" id="ehb-X0-lO7"/>
@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNR-qG-o5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.2442748091603" y="-60.563380281690144"/>
+            <point key="canvasLocation" x="1193" y="-51"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k7U-Ke-DHf">
